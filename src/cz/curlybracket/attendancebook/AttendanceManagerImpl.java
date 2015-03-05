@@ -1,5 +1,9 @@
 package cz.curlybracket.attendancebook;
 
+import javafx.collections.transformation.SortedList;
+
+import java.util.List;
+
 public class AttendanceManagerImpl {
 
 	/**
@@ -22,9 +26,9 @@ public class AttendanceManagerImpl {
 
 	/**
 	 *
-	 * @param String
+	 * @param position
 	 */
-	public List<Employee> findEmployeesPresentByPosition(position String) {
+	public List<Employee> findEmployeesPresentByPosition(String position) {
 		// TODO - implement AttendanceManagerImpl.findEmployeesPresentByPosition
 		throw new UnsupportedOperationException();
 	}
@@ -38,8 +42,8 @@ public class AttendanceManagerImpl {
 		throw new UnsupportedOperationException();
 	}
 
-	public void checkIfEpidemiaBeingSpread() {
-		// TODO - implement AttendanceManagerImpl.checkIfEpidemiaBeingSpread
+	public void checkIfEpidemicBeingSpread() {
+		// TODO - implement AttendanceManagerImpl.checkIfEpidemicBeingSpread
 		throw new UnsupportedOperationException();
 	}
 

@@ -1,5 +1,9 @@
 package cz.curlybracket.attendancebook;
 
+import javafx.collections.transformation.SortedList;
+
+import java.util.List;
+
 public interface AttendanceManager {
 
 	/**
@@ -16,9 +20,9 @@ public interface AttendanceManager {
 
 	/**
 	 *
-	 * @param String
+	 * @param position
 	 */
-	List<Employee> findEmployeesPresentByPosition(position String);
+	List<Employee> findEmployeesPresentByPosition(String position);
 
 	/**
 	 *

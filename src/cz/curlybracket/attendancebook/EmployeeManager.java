@@ -1,5 +1,8 @@
 package cz.curlybracket.attendancebook;
 
+import java.util.List;
+import java.util.UUID;
+
 public interface EmployeeManager {
 
 	/**

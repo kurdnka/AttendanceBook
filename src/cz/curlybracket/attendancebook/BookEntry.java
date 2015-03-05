@@ -1,5 +1,8 @@
 package cz.curlybracket.attendancebook;
 
+import java.util.Date;
+import java.util.UUID;
+
 public class BookEntry {
 
 	private UUID id;
@@ -20,17 +23,17 @@ public class BookEntry {
 		this.id = id;
 	}
 
-	public Employee getEmployeeId() {
-		// TODO - implement BookEntry.getEmployeeId
+	public Employee getEmployee() {
+		// TODO - implement BookEntry.getEmployee
 		throw new UnsupportedOperationException();
 	}
 
 	/**
 	 *
-	 * @param Employee
+	 * @param employee
 	 */
-	public void setEmployeeId(UUID Employee) {
-		// TODO - implement BookEntry.setEmployeeId
+	public void setEmployee(Employee employee) {
+		// TODO - implement BookEntry.setEmployee
 		throw new UnsupportedOperationException();
 	}
 
@@ -58,7 +61,7 @@ public class BookEntry {
 		this.endDate = endDate;
 	}
 
-	public AttendanceType getType() {
+	public EntryType getType() {
 		// TODO - implement BookEntry.getType
 		throw new UnsupportedOperationException();
 	}
@@ -67,7 +70,7 @@ public class BookEntry {
 	 *
 	 * @param type
 	 */
-	public void setType(AttendanceType type) {
+	public void setType(EntryType type) {
 		// TODO - implement BookEntry.setType
 		throw new UnsupportedOperationException();
 	}

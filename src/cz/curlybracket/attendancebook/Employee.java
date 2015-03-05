@@ -1,5 +1,7 @@
 package cz.curlybracket.attendancebook;
 
+import java.util.UUID;
+
 public class Employee {
 
 	private UUID id;
