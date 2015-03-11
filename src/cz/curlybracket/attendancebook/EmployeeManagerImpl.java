@@ -7,8 +7,11 @@ public class EmployeeManagerImpl {
     private List<Employee> employees = new ArrayList<Employee>();
 
 	/**
-	 *
-	 * @param employee
+	 * Creates new employee with unique ID and adds it to database, throws IllegalArgumentException if argument is null
+     *
+	 * @param employee - employee to be added
+     * @return employee - added employee
+     * @throws java.lang.IllegalArgumentException - if argument is null
 	 */
 	public Employee createEmployee(Employee employee) {
         if(employee == null) {
@@ -20,40 +23,78 @@ public class EmployeeManagerImpl {
 	}
 
 	/**
+	 * Replaces specific employee contained in database, throws IllegalArgumentException if argument is null or
+     * NoSuchElementException if specified employee is not in database
 	 *
-	 * @param employee
+     * @param employee - employee to be replaced
+     * @throws java.lang.IllegalArgumentException - if argument is null
+     * @throws java.util.NoSuchElementException - if specified employee is not in database
 	 */
 	public void updateEmployee(Employee employee) {
-
+        if(employee == null) {
+            throw new IllegalArgumentException("Employee cannot be null.");
+        }
+        if(!employees.contains(employee)) {
+            throw new NoSuchElementException("No such employee in list.");
+        }
+        for(Employee tempEmployee : employees) {
+            if (tempEmployee.equals(employee)) {
+                employees.set(employees.indexOf(tempEmployee), employee);
+                return;
+            }
+        }
 	}
 
 	/**
-	 *
-	 * @param employee
+	 * Deletes specific employee from database, throws IllegalArgumentException if argument is null or
+     * NoSuchElementException if specified employee is not in database
+     *
+	 * @param employee - employee to be deleted
+     * @throws java.lang.IllegalArgumentException - if argument is null
+     * @throws java.util.NoSuchElementException - if specified employee is not in database
 	 */
 	public void deleteEmployee(Employee employee) {
-		// TODO - implement EmployeeManagerImpl.deleteEmployee
-		throw new UnsupportedOperationException();
+        if(employee == null) {
+            throw new IllegalArgumentException("Employee cannot be null.");
+        }
+        if(!employees.contains(employee)) {
+            throw new NoSuchElementException("No such employee in list.");
+        }
+        for(Employee tempEmployee : employees) {
+            if (tempEmployee.equals(employee)) {
+                employees.remove(employee);
+                return;
+            }
+        }
 	}
 
+    /**
+     * Returns unmodifiable list of all employees stored in database
+     *
+     * @return employees - unmodifiable list of all employees
+     */
 	public List<Employee> listAllEmployees() {
 		return Collections.unmodifiableList(employees);
 	}
 
 	/**
-	 *
-	 * @param id
+	 * Returns employee with specified ID, throws IllegalArgumentException if argument is null or
+     * NoSuchElementException if specified employee is not in database
+     *
+	 * @param id - ID of employee to be returned
+     * @throws java.lang.IllegalArgumentException - if argument is null
+     * @throws java.util.NoSuchElementException - if specified employee is not in database
 	 */
 	public Employee getEmployeeById(UUID id) {
         if(id == null) {
-            throw new IllegalArgumentException("Employee cannot be null.");
+            throw new IllegalArgumentException("ID cannot be null.");
         }
         for(Employee employee : employees) {
-            if(employee.getId().compareTo(id) == 0) {
+            if (employee.getId().compareTo(id) == 0) {
                 return employee;
             }
         }
-        throw new NoSuchElementException("No such employee in list with specified ID.");
+        throw new NoSuchElementException("No such employee with specified ID in database.");
 	}
 
 }
