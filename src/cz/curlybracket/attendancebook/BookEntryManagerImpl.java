@@ -7,7 +7,7 @@ public class BookEntryManagerImpl {
 	 * @param entry
 	 */
 	public BookEntry createNewBookEntry(BookEntry entry) {
-		// TODO - implement BookEntryManagerImpl.createNewBookEntry
+		// TODO - implement BookEntryManagerImpl.createBookEntry
 		throw new UnsupportedOperationException();
 	}
 

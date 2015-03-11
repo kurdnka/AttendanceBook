@@ -9,7 +9,7 @@ public class EmployeeManagerImpl {
 	 *
 	 * @param employee
 	 */
-	public void createEmployee(Employee employee) {
+	public Employee createEmployee(Employee employee) {
 		// TODO - implement EmployeeManagerImpl.createEmployee
 		throw new UnsupportedOperationException();
 	}

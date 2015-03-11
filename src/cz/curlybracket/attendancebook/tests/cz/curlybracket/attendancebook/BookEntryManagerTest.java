@@ -5,11 +5,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.*;
 
-import java.awt.print.Book;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
-import java.util.UUID;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -45,18 +43,18 @@ public class BookEntryManagerTest {
     }
 
     @Test
-    public void testCreateCarWithNull() throws Exception {
+    public void testCreateBookEntryWithNull() throws Exception {
         try {
-            bookEntryManager.createNewBookEntry(null);
+            bookEntryManager.createBookEntry(null);
             fail("Did not throw a NullPointerException for empty input");
         } catch (NullPointerException ex) {
         }
     }
 
     @Test
-    public void testCreateNewBookEntryWithId() throws Exception {
+    public void testCreateBookEntryWithId() throws Exception {
         BookEntry bookEntry = new BookEntry();
-        BookEntry newBookEntry = bookEntryManager.createNewBookEntry(bookEntry);
+        BookEntry newBookEntry = bookEntryManager.createBookEntry(bookEntry);
         assertThat(newBookEntry.getId(), is(not(equalTo(null))));
     }
 
@@ -75,7 +73,7 @@ public class BookEntryManagerTest {
         BookEntry entry = new BookEntry();
         entry.setType(EntryType.Holiday);
         entry.setStartDate(new Date());
-        BookEntry newEntry = bookEntryManager.createNewBookEntry(entry);
+        BookEntry newEntry = bookEntryManager.createBookEntry(entry);
         assertThat(bookEntryManager.findAllBookEntries(), hasItem(newEntry));
     }
 }

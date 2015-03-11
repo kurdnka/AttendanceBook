@@ -10,7 +10,7 @@ public interface BookEntryManager {
 	 *
 	 * @param entry
 	 */
-	BookEntry createNewBookEntry(BookEntry entry);
+	BookEntry createBookEntry(BookEntry entry);
 
 	/**
 	 *

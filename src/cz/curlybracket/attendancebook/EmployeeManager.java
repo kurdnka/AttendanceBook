@@ -9,7 +9,7 @@ public interface EmployeeManager {
 	 *
 	 * @param employee
 	 */
-	void createEmployee(Employee employee);
+	Employee createEmployee(Employee employee);
 
 	/**
 	 *
