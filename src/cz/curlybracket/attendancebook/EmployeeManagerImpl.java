@@ -1,17 +1,22 @@
 package cz.curlybracket.attendancebook;
 
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class EmployeeManagerImpl {
+
+    private List<Employee> employees = new ArrayList<Employee>();
 
 	/**
 	 *
 	 * @param employee
 	 */
 	public Employee createEmployee(Employee employee) {
-		// TODO - implement EmployeeManagerImpl.createEmployee
-		throw new UnsupportedOperationException();
+        if(employee == null) {
+            throw new IllegalArgumentException("Employee cannot be null.");
+        }
+        employee.setId(UUID.randomUUID());
+        employees.add(employee);
+        return employee;
 	}
 
 	/**
@@ -19,8 +24,7 @@ public class EmployeeManagerImpl {
 	 * @param employee
 	 */
 	public void updateEmployee(Employee employee) {
-		// TODO - implement EmployeeManagerImpl.updateEmployee
-		throw new UnsupportedOperationException();
+
 	}
 
 	/**
@@ -33,8 +37,7 @@ public class EmployeeManagerImpl {
 	}
 
 	public List<Employee> listAllEmployees() {
-		// TODO - implement EmployeeManagerImpl.listAllEmployees
-		throw new UnsupportedOperationException();
+		return Collections.unmodifiableList(employees);
 	}
 
 	/**
@@ -42,8 +45,15 @@ public class EmployeeManagerImpl {
 	 * @param id
 	 */
 	public Employee getEmployeeById(UUID id) {
-		// TODO - implement EmployeeManagerImpl.getEmployeeById
-		throw new UnsupportedOperationException();
+        if(id == null) {
+            throw new IllegalArgumentException("Employee cannot be null.");
+        }
+        for(Employee employee : employees) {
+            if(employee.getId().compareTo(id) == 0) {
+                return employee;
+            }
+        }
+        throw new NoSuchElementException("No such employee in list with specified ID.");
 	}
 
 }

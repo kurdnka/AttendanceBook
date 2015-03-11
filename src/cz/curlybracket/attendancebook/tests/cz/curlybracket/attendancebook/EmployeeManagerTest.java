@@ -7,14 +7,12 @@ import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Date;
 import java.util.UUID;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;
-import static org.junit.matchers.JUnitMatchers.hasItem;
 
 public class EmployeeManagerTest {
 
@@ -64,7 +62,13 @@ public class EmployeeManagerTest {
 
     @Test
     public void testUpdateEmployee() throws Exception {
+        Employee employee = new Employee();
 
+        Employee newEmployee = employeeManager.createEmployee(employee);
+        Employee employee2 = new Employee();
+        UUID id = UUID.randomUUID();
+        employee.setId(id);
+        assertThat(newEmployee.getId(), is(not(equalTo(null))));
     }
 
     @Test
@@ -79,16 +83,9 @@ public class EmployeeManagerTest {
 
     @Test
     public void testGetEmployeeById() throws Exception {
-
-    }
-
-    @Test
-    public void testEmployeeCanBeRetrievedById() throws Exception {
         Employee employee = new Employee();
         UUID id = UUID.randomUUID();
         employee.setId(id);
-        employee.setName("Bartek");
-        employee.setOfficeNumber(5);
         assertThat(employeeManager.getEmployeeById(id).getId(), is(equalTo(id)));
     }
 }

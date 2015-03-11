@@ -8,7 +8,6 @@ import org.junit.runners.Parameterized.*;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
 public class AttendanceManagerTest {
@@ -17,14 +16,13 @@ public class AttendanceManagerTest {
 
     @Parameters
     public static Collection<Class> getParameters() {
-        return Arrays.asList( new Class[] {
-                AttendanceManagerImpl.class
-            }
+        return Arrays.asList(new Class[]{
+                        AttendanceManagerImpl.class
+                }
         );
     }
 
     public AttendanceManagerTest(Class attendanceManagerImpl) {
-
         this.attendanceManagerImpl = attendanceManagerImpl;
     }
 
