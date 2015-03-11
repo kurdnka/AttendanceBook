@@ -1,12 +1,16 @@
 package cz.curlybracket.attendancebook;
 
+import com.sun.corba.se.impl.encoding.OSFCodeSetRegistry;
+
+import java.util.List;
+
 public interface BookEntryManager {
 
 	/**
 	 *
 	 * @param entry
 	 */
-	void createNewBookEntry(BookEntry entry);
+	BookEntry createNewBookEntry(BookEntry entry);
 
 	/**
 	 *
@@ -19,5 +23,11 @@ public interface BookEntryManager {
 	 * @param entry
 	 */
 	void deleteBookEntry(BookEntry entry);
+
+	/*
+	 *
+	 * @return s
+	 */
+	List<BookEntry> findAllBookEntries ();
 
 }

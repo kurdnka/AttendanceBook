@@ -21,7 +21,7 @@ public class AttendanceManagerImpl {
 	 */
 	public boolean doesEmployeeFulfillTheirWorkLoad(Employee employee) {
 		// TODO - implement AttendanceManagerImpl.doesEmployeeFulfillTheirWorkLoad
-		throw new UnsupportedOperationException();
+		return true;
 	}
 
 	/**
