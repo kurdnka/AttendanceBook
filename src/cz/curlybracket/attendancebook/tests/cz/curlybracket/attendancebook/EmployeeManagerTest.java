@@ -63,17 +63,21 @@ public class EmployeeManagerTest {
     @Test
     public void testUpdateEmployee() throws Exception {
         Employee employee = new Employee();
-
+        employee.setName("Ludek");
         Employee newEmployee = employeeManager.createEmployee(employee);
         Employee employee2 = new Employee();
-        UUID id = UUID.randomUUID();
-        employee.setId(id);
-        assertThat(newEmployee.getId(), is(not(equalTo(null))));
+        employee2.setId(employee.getId());
+        employee2.setName("Bartek");
+        employeeManager.updateEmployee(employee2);
+        assertThat(newEmployee.getName(), is(equalTo("Bartek")));
     }
 
     @Test
     public void testDeleteEmployee() throws Exception {
-
+        Employee employee = new Employee();
+        Employee newEmployee = employeeManager.createEmployee(employee);
+        employeeManager.deleteEmployee(newEmployee);
+        assertFalse(employeeManager.listAllEmployees().contains(newEmployee));
     }
 
     @Test
@@ -84,8 +88,7 @@ public class EmployeeManagerTest {
     @Test
     public void testGetEmployeeById() throws Exception {
         Employee employee = new Employee();
-        UUID id = UUID.randomUUID();
-        employee.setId(id);
-        assertThat(employeeManager.getEmployeeById(id).getId(), is(equalTo(id)));
+        Employee newEmployee = employeeManager.createEmployee(employee);
+        assertThat(employeeManager.getEmployeeById(newEmployee.getId()).getId(), is(equalTo(newEmployee.getId())));
     }
 }

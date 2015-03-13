@@ -10,7 +10,7 @@ public interface EmployeeManager {
      *
      * @param employee - employee to be added
      * @return employee - added employee
-     * @throws java.lang.IllegalArgumentException - if argument is null
+     * @throws java.lang.NullPointerException - if argument is null
      */
 	public Employee createEmployee(Employee employee);
 
@@ -19,7 +19,7 @@ public interface EmployeeManager {
      * NoSuchElementException if specified employee is not in database
      *
      * @param employee - employee to be replaced
-     * @throws java.lang.IllegalArgumentException - if argument is null
+     * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
 	public void updateEmployee(Employee employee);
@@ -29,7 +29,7 @@ public interface EmployeeManager {
      * NoSuchElementException if specified employee is not in database
      *
      * @param employee - employee to be deleted
-     * @throws java.lang.IllegalArgumentException - if argument is null
+     * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
 	public void deleteEmployee(Employee employee);
@@ -46,7 +46,7 @@ public interface EmployeeManager {
      * NoSuchElementException if specified employee is not in database
      *
      * @param id - ID of employee to be returned
-     * @throws java.lang.IllegalArgumentException - if argument is null
+     * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
 	public Employee getEmployeeById(UUID id);
