@@ -74,7 +74,6 @@ public class BookEntryManagerTest {
     @Test
     public void testCreateBookEntryCanBeRetrieved() throws Exception {
         BookEntry entry = new BookEntry();
-        entry.setType(EntryType.Holiday);
         entry.setStartDate(new Date());
         BookEntry newEntry = bookEntryManager.createBookEntry(entry);
         assertThat(bookEntryManager.findAllBookEntries(), hasItem(newEntry));

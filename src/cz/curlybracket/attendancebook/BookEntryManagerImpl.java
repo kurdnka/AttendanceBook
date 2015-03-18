@@ -1,6 +1,8 @@
 package cz.curlybracket.attendancebook;
 
-public class BookEntryManagerImpl {
+import java.util.List;
+
+public class BookEntryManagerImpl implements BookEntryManager {
 
 	/**
 	 *
@@ -11,7 +13,12 @@ public class BookEntryManagerImpl {
 		throw new UnsupportedOperationException();
 	}
 
-	/**
+    @Override
+    public BookEntry createBookEntry(BookEntry entry) {
+        return null;
+    }
+
+    /**
 	 *
 	 * @param entry
 	 */
@@ -28,5 +35,10 @@ public class BookEntryManagerImpl {
 		// TODO - implement BookEntryManagerImpl.deleteBookEntry
 		throw new UnsupportedOperationException();
 	}
+
+    @Override
+    public List<BookEntry> findAllBookEntries() {
+        return null;
+    }
 
 }
