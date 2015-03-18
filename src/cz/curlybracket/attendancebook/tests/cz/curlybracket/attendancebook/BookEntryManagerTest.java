@@ -20,10 +20,13 @@ public class BookEntryManagerTest {
     private BookEntryManager bookEntryManager;
 
     @Parameters
-    public static Collection<Class> getParameters() {
-        return Arrays.asList(new Class[]{
-                        BookEntryManagerImpl.class
+    public static Collection<Object> getParameters() {
+        return Arrays.asList(
+            new Object[]{
+                new Class[]{
+                    BookEntryManagerImpl.class
                 }
+            }
         );
     }
 
@@ -47,7 +50,7 @@ public class BookEntryManagerTest {
         try {
             bookEntryManager.createBookEntry(null);
             fail("Did not throw a NullPointerException for empty input");
-        } catch (NullPointerException ex) {
+        } catch (NullPointerException ignored) {
         }
     }
 

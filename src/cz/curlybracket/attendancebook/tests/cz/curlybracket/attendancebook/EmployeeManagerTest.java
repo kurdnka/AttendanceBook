@@ -3,17 +3,18 @@ package cz.curlybracket.attendancebook;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.UUID;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;
 
+@RunWith(Parameterized.class)
 public class EmployeeManagerTest {
 
 
@@ -21,9 +22,12 @@ public class EmployeeManagerTest {
     private EmployeeManager employeeManager;
 
     @Parameterized.Parameters
-    public static Collection<Class> getParameters() {
-        return Arrays.asList(new Class[]{
-                        EmployeeManagerImpl.class
+    public static Collection<Object> getParameters() {
+        return Arrays.asList(
+                new Object[]{
+                        new Class[]{
+                                EmployeeManagerImpl.class
+                        }
                 }
         );
     }
@@ -63,13 +67,13 @@ public class EmployeeManagerTest {
     @Test
     public void testUpdateEmployee() throws Exception {
         Employee employee = new Employee();
-        employee.setName("Ludek");
+        employee.setName("Ludek") ;
         Employee newEmployee = employeeManager.createEmployee(employee);
         Employee employee2 = new Employee();
-        employee2.setId(employee.getId());
+        employee2.setId(newEmployee.getId());
         employee2.setName("Bartek");
         employeeManager.updateEmployee(employee2);
-        assertThat(newEmployee.getName(), is(equalTo("Bartek")));
+        assertThat(employeeManager.getEmployeeById(newEmployee.getId()).getName(), is(equalTo("Bartek")));
     }
 
     @Test
