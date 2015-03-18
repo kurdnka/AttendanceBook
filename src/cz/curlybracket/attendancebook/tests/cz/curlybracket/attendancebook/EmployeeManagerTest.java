@@ -86,7 +86,9 @@ public class EmployeeManagerTest {
 
     @Test
     public void testListAllEmployees() throws Exception {
-
+        Employee employee = new Employee();
+        Employee newEmployee = employeeManager.createEmployee(employee);
+        assertTrue(employeeManager.listAllEmployees().contains(newEmployee));
     }
 
     @Test
