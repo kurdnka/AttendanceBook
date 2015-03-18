@@ -20,7 +20,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="org.apache.derby:derby:10.9.1.0" level="project" />
-    <orderEntry type="library" name="org.springframework:spring-jdbc:3.2.0.RELEASE" level="project" />
   </component>
 </module>
