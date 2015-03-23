@@ -8,6 +8,8 @@ import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.NoSuchElementException;
+import java.util.UUID;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
@@ -65,6 +67,24 @@ public class EmployeeManagerTest {
     }
 
     @Test
+    public void testUpdateEmployeeWithNull() throws Exception {
+        try {
+            employeeManager.updateEmployee(null);
+            fail("Did not throw a NullPointerException for empty input");
+        } catch (NullPointerException ex) {
+        }
+    }
+
+    @Test
+    public void testUpdateEmployeeNonExisting() throws Exception {
+        try {
+            employeeManager.updateEmployee(new Employee());
+            fail("Did not throw a NoSuchElementException for not existing employee");
+        } catch (NoSuchElementException ex) {
+        }
+    }
+
+    @Test
     public void testUpdateEmployee() throws Exception {
         Employee employee = new Employee();
         employee.setName("Ludek") ;
@@ -74,6 +94,24 @@ public class EmployeeManagerTest {
         employee2.setName("Bartek");
         employeeManager.updateEmployee(employee2);
         assertThat(employeeManager.getEmployeeById(newEmployee.getId()).getName(), is(equalTo("Bartek")));
+    }
+
+    @Test
+    public void testDeleteEmployeeWithNull() throws Exception {
+        try {
+            employeeManager.deleteEmployee(null);
+            fail("Did not throw a NullPointerException for empty input");
+        } catch (NullPointerException ex) {
+        }
+    }
+
+    @Test
+    public void testDeleteEmployeeNonExisting() throws Exception {
+        try {
+            employeeManager.deleteEmployee(new Employee());
+            fail("Did not throw a NoSuchElementException for not existing employee");
+        } catch (NoSuchElementException ex) {
+        }
     }
 
     @Test
@@ -89,6 +127,24 @@ public class EmployeeManagerTest {
         Employee employee = new Employee();
         Employee newEmployee = employeeManager.createEmployee(employee);
         assertTrue(employeeManager.listAllEmployees().contains(newEmployee));
+    }
+
+    @Test
+    public void testGetEmployeeByIdWithNull() throws Exception {
+        try {
+            employeeManager.getEmployeeById(null);
+            fail("Did not throw a NullPointerException for empty input");
+        } catch (NullPointerException ex) {
+        }
+    }
+
+    @Test
+    public void testGetEmployeeByIdNonExisting() throws Exception {
+        try {
+            employeeManager.getEmployeeById(UUID.randomUUID());
+            fail("Did not throw a NoSuchElementException for not existing employee");
+        } catch (NoSuchElementException ex) {
+        }
     }
 
     @Test

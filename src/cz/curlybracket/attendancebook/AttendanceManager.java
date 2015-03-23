@@ -28,6 +28,5 @@ public interface AttendanceManager {
 	 *
 	 * @param employee
 	 */
-	SortedList<Employee> getAttendanceHistoryByEmployee(Employee employee);
-
+	SortedList<BookEntry> getAttendanceHistoryByEmployee(Employee employee);
 }

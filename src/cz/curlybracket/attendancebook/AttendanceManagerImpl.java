@@ -4,7 +4,7 @@ import javafx.collections.transformation.SortedList;
 
 import java.util.List;
 
-public class AttendanceManagerImpl {
+public class AttendanceManagerImpl implements AttendanceManager {
 
 	/**
 	 *
@@ -37,14 +37,18 @@ public class AttendanceManagerImpl {
 	 *
 	 * @param employee
 	 */
-	public SortedList<Employee> getAttendanceHistoryByEmployee(Employee employee) {
+	public SortedList<BookEntry> getAttendanceHistoryByEmployee(Employee employee) {
 		// TODO - implement AttendanceManagerImpl.getAttendanceHistoryByEmployee
 		throw new UnsupportedOperationException();
 	}
 
-	public void checkIfEpidemicBeingSpread() {
+    /**
+     * toto vazne nejdem implementovat...
+     *
+    public void checkIfEpidemicBeingSpread() {
 		// TODO - implement AttendanceManagerImpl.checkIfEpidemicBeingSpread
 		throw new UnsupportedOperationException();
 	}
+     */
 
 }
