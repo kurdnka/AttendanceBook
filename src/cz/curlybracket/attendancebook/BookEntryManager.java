@@ -10,7 +10,7 @@ public interface BookEntryManager {
 	 *
 	 * @param entry
 	 */
-	BookEntry createBookEntry(BookEntry entry);
+	BookEntry createBookEntry(BookEntry entry) throws Exception;
 
 	/**
 	 *
