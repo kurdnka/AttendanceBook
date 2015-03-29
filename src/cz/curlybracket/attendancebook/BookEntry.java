@@ -1,17 +1,16 @@
 package cz.curlybracket.attendancebook;
 
 import java.util.Date;
-import java.util.UUID;
 
 public class BookEntry {
 
-	private UUID id;
+	private Long id;
 	private Employee employee;
 	private Date startDate;
 	private Date endDate;
 	private EntryType type;
 
-	public UUID getId() {
+	public Long getId() {
 		return this.id;
 	}
 
@@ -19,7 +18,7 @@ public class BookEntry {
 	 *
 	 * @param id
 	 */
-	public void setId(UUID id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

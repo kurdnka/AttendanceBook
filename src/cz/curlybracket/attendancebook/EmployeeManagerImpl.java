@@ -45,7 +45,7 @@ public class EmployeeManagerImpl implements EmployeeManager {
                 st.executeUpdate();
                 try (ResultSet keys = st.getGeneratedKeys()) {
                     if (keys.next()) {
-                        UUID id = UUID.nameUUIDFromBytes(keys.getBlob(1).getBytes(0, (int) keys.getBlob(1).length()));
+                        Long id = UUID.nameUUIDFromBytes(keys.getBlob(1).getBytes(0, (int) keys.getBlob(1).length()));
                         employee.setId(id);
                     }
                 } catch (Exception ex){
@@ -117,7 +117,7 @@ public class EmployeeManagerImpl implements EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
 	 */
-	public Employee getEmployeeById(UUID id) {
+	public Employee getEmployeeById(Long id) {
         if(id == null) {
             throw new NullPointerException("ID cannot be null.");
         }

@@ -2,14 +2,8 @@ package cz.curlybracket.attendancebook;
 
 import javax.sql.DataSource;
 import javax.sql.rowset.serial.SerialBlob;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.nio.ByteBuffer;
 import java.sql.*;
-import java.time.LocalDate;
-import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
@@ -24,20 +18,6 @@ public class BookEntryManagerImpl implements BookEntryManager {
         this.employeeManager = employeeManager;
     }
 
-    private static Blob createUuidBlob(UUID uuid) throws SQLException {
-        ByteBuffer blob = ByteBuffer.wrap(new byte[16]);
-        blob.putLong(uuid.getMostSignificantBits());
-        blob.putLong(uuid.getLeastSignificantBits());
-        return new SerialBlob(blob.array());
-    }
-
-    private static UUID getUuidFromBlob(Blob blob) throws SQLException {
-        UUID id = UUID.nameUUIDFromBytes(blob.getBytes(0, (int) blob.length()));
-        blob.free();
-
-        return id;
-    }
-
 
 
     /**
@@ -49,14 +29,14 @@ public class BookEntryManagerImpl implements BookEntryManager {
             try (PreparedStatement st = con.prepareStatement(
                     "insert into BOOK_ENTRIES (EMPLOYEE_ID, START_DATE, END_DATE, TYPE) values (?,?,?,?)",
                     PreparedStatement.RETURN_GENERATED_KEYS)) {
-                st.setBlob(1, createUuidBlob(entry.getEmployee().getId()));
+                st.setLong(1, entry.getEmployee().getId());
                 st.setObject(2, entry.getStartDate(), Types.DATE);
                 st.setObject(3, entry.getEndDate(), Types.DATE);
                 st.setString(4, entry.getType().toString());
                 st.executeUpdate();
                 try (ResultSet keys = st.getGeneratedKeys()) {
                     if (keys.next()) {
-                        UUID id = getUuidFromBlob(keys.getBlob(1));
+                        Long id = keys.getLong(1);
                         entry.setId(id);
                     }
                 }
@@ -75,7 +55,7 @@ public class BookEntryManagerImpl implements BookEntryManager {
         try (Connection con = dataSource.getConnection()) {
             try (PreparedStatement st = con.prepareStatement(
                     "update BOOK_ENTRIES set EMPLOYEE_ID=?, START_DATE=?, END_DATE=?, TYPE=? where ID=?")) {
-                st.setBlob(1,  createUuidBlob(entry.getEmployee().getId()));
+                st.setLong(1, entry.getEmployee().getId());
                 st.setObject(2, entry.getStartDate(), Types.DATE);
                 st.setObject(3, entry.getEndDate(), Types.DATE);
                 st.setString(4, entry.getType().toString());
@@ -110,16 +90,16 @@ public class BookEntryManagerImpl implements BookEntryManager {
     }
 
     @Override
-    public BookEntry getBookEntryById(UUID id) throws Exception {
+    public BookEntry getBookEntryById(Long id) throws Exception {
         try (Connection con = dataSource.getConnection()) {
             try (PreparedStatement st = con.prepareStatement("select * from BOOK_ENTRIES where ID = ?")) {
-                st.setBlob(1, createUuidBlob(id));
+                st.setLong(1, id);
                 try (ResultSet rs = st.executeQuery()) {
                     if (rs.next()) {
                         Date endDate = rs.getDate("END_DATE");
                         Date startDate = rs.getDate("START_DATE");
                         EntryType type = EntryType.valueOf(rs.getString("TYPE"));
-                        UUID employeeId = getUuidFromBlob(rs.getBlob("EMPLOYEE_ID"));
+                        Long employeeId = rs.getLong("EMPLOYEE_ID");
 
                         BookEntry entry = new BookEntry();
                         entry.setId(id);

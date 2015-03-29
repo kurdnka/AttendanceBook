@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3046197170">
-    <data-source source="LOCAL" name="Oracle -" uuid="ad366bd3-fe79-4a2e-8cda-e2ae2f1dcc2f">
-      <driver-ref>oracle</driver-ref>
-      <auto-commit>false</auto-commit>
-      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
-      <jdbc-url>jdbc:oracle:thin:@db.fi.muni.cz:1521:db10</jdbc-url>
+  <component name="DataSourceManagerImpl" format="xml" hash="2942636684">
+    <data-source source="LOCAL" name="SQLite -" uuid="d707402e-dbc7-45fb-93ef-ea8e6ecd3506">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/attendancebook.sqlite</jdbc-url>
       <libraries />
     </data-source>
   </component>

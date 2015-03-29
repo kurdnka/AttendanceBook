@@ -1,9 +1,6 @@
 package cz.curlybracket.attendancebook;
 
-import com.sun.corba.se.impl.encoding.OSFCodeSetRegistry;
-
 import java.util.List;
-import java.util.UUID;
 
 public interface BookEntryManager {
 
@@ -39,6 +36,6 @@ public interface BookEntryManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
-    BookEntry getBookEntryById(UUID id) throws Exception;
+    BookEntry getBookEntryById(Long id) throws Exception;
 
 }

@@ -1,16 +1,14 @@
 package cz.curlybracket.attendancebook;
 
-import java.util.UUID;
-
 public class Employee {
 
-	private UUID id;
+	private Long id;
 	private String name;
 	private int officeNumber;
 	private String position;
 	private int workLoad;
 
-	public UUID getId() {
+	public Long getId() {
 		return this.id;
 	}
 
@@ -18,7 +16,7 @@ public class Employee {
 	 *
 	 * @param id
 	 */
-	public void setId(UUID id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

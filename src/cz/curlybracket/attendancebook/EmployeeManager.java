@@ -1,7 +1,6 @@
 package cz.curlybracket.attendancebook;
 
 import java.util.List;
-import java.util.UUID;
 
 public interface EmployeeManager {
 
@@ -49,6 +48,6 @@ public interface EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
-	public Employee getEmployeeById(UUID id);
+	public Employee getEmployeeById(Long id);
 
 }
