@@ -56,7 +56,6 @@ public class EmployeeManagerImpl implements EmployeeManager {
         } catch (SQLException ex) {
             throw new Exception("Database insert failed.", ex);
         }
-
 	}
 
 	/**
