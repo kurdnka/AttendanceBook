@@ -1,8 +1,25 @@
 package cz.curlybracket.attendancebook;
 
+import javax.sql.DataSource;
+import javax.sql.rowset.serial.SerialBlob;
+import java.nio.ByteBuffer;
+import java.sql.*;
 import java.util.*;
 
 public class EmployeeManagerImpl implements EmployeeManager {
+
+    private final DataSource dataSource;
+
+    public EmployeeManagerImpl(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
+    private SerialBlob createUuidBlob(UUID uuid) throws SQLException {
+        ByteBuffer blob = ByteBuffer.wrap(new byte[16]);
+        blob.putLong(uuid.getMostSignificantBits());
+        blob.putLong(uuid.getLeastSignificantBits());
+        return new SerialBlob(blob.array());
+    }
 
     private List<Employee> employees = new ArrayList<Employee>();
 
@@ -13,13 +30,33 @@ public class EmployeeManagerImpl implements EmployeeManager {
      * @return employee - added employee
      * @throws java.lang.NullPointerException - if argument is null
 	 */
-	public Employee createEmployee(Employee employee) {
+	public Employee createEmployee(Employee employee) throws Exception {
         if(employee == null) {
             throw new NullPointerException("Employee cannot be null.");
         }
-        employee.setId(UUID.randomUUID());
-        employees.add(employee);
-        return employee;
+        try (Connection con = dataSource.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement(
+                    "insert into EMPLOYEES (NAME, OFFICE_NUMBER, POSITION, WORK_LOAD) values (?,?,?,?)",
+                    PreparedStatement.RETURN_GENERATED_KEYS)) {
+                st.setString(1, employee.getName());
+                st.setInt(2, employee.getOfficeNumber());
+                st.setString(3, employee.getPosition());
+                st.setInt(4, employee.getWorkLoad());
+                st.executeUpdate();
+                try (ResultSet keys = st.getGeneratedKeys()) {
+                    if (keys.next()) {
+                        UUID id = UUID.nameUUIDFromBytes(keys.getBlob(1).getBytes(0, (int) keys.getBlob(1).length()));
+                        employee.setId(id);
+                    }
+                } catch (Exception ex){
+                    throw new Exception("Generating UUID failed.", ex);
+                }
+                return employee;
+            }
+        } catch (SQLException ex) {
+            throw new Exception("Database insert failed.", ex);
+        }
+
 	}
 
 	/**

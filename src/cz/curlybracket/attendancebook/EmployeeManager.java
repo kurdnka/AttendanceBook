@@ -12,7 +12,7 @@ public interface EmployeeManager {
      * @return employee - added employee
      * @throws java.lang.NullPointerException - if argument is null
      */
-	public Employee createEmployee(Employee employee);
+	public Employee createEmployee(Employee employee) throws Exception;
 
     /**
      * Replaces specific employee contained in database, throws IllegalArgumentException if argument is null or
