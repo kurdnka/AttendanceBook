@@ -11,7 +11,7 @@ public interface EmployeeManager {
      * @return employee - added employee
      * @throws java.lang.NullPointerException - if argument is null
      */
-	public Employee createEmployee(Employee employee) throws Exception;
+    Employee createEmployee(Employee employee) throws Exception;
 
     /**
      * Replaces specific employee contained in database, throws IllegalArgumentException if argument is null or
@@ -21,7 +21,7 @@ public interface EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
-	public void updateEmployee(Employee employee);
+    void updateEmployee(Employee employee);
 
     /**
      * Deletes specific employee from database, throws IllegalArgumentException if argument is null or
@@ -31,14 +31,14 @@ public interface EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
-	public void deleteEmployee(Employee employee);
+    void deleteEmployee(Employee employee);
 
     /**
      * Returns unmodifiable list of all employees stored in database
      *
      * @return employees - unmodifiable list of all employees
      */
-	public List<Employee> listAllEmployees();
+    List<Employee> listAllEmployees();
 
     /**
      * Returns employee with specified ID, throws IllegalArgumentException if argument is null or
@@ -48,6 +48,6 @@ public interface EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
-	public Employee getEmployeeById(Long id);
+    Employee getEmployeeById(Long id);
 
 }

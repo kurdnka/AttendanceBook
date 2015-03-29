@@ -14,13 +14,6 @@ public class EmployeeManagerImpl implements EmployeeManager {
         this.dataSource = dataSource;
     }
 
-    private SerialBlob createUuidBlob(UUID uuid) throws SQLException {
-        ByteBuffer blob = ByteBuffer.wrap(new byte[16]);
-        blob.putLong(uuid.getMostSignificantBits());
-        blob.putLong(uuid.getLeastSignificantBits());
-        return new SerialBlob(blob.array());
-    }
-
     private List<Employee> employees = new ArrayList<Employee>();
 
 	/**
@@ -45,7 +38,7 @@ public class EmployeeManagerImpl implements EmployeeManager {
                 st.executeUpdate();
                 try (ResultSet keys = st.getGeneratedKeys()) {
                     if (keys.next()) {
-                        Long id = UUID.nameUUIDFromBytes(keys.getBlob(1).getBytes(0, (int) keys.getBlob(1).length()));
+                        Long id = keys.getLong(1);
                         employee.setId(id);
                     }
                 } catch (Exception ex){

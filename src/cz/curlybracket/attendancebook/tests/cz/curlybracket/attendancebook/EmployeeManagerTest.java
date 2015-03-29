@@ -141,7 +141,7 @@ public class EmployeeManagerTest {
     @Test
     public void testGetEmployeeByIdNonExisting() throws Exception {
         try {
-            employeeManager.getEmployeeById(UUID.randomUUID());
+            employeeManager.getEmployeeById((long) -1);
             fail("Did not throw a NoSuchElementException for not existing employee");
         } catch (NoSuchElementException ex) {
         }
