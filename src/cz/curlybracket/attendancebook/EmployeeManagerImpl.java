@@ -1,8 +1,6 @@
 package cz.curlybracket.attendancebook;
 
 import javax.sql.DataSource;
-import javax.sql.rowset.serial.SerialBlob;
-import java.nio.ByteBuffer;
 import java.sql.*;
 import java.util.*;
 
@@ -14,7 +12,6 @@ public class EmployeeManagerImpl implements EmployeeManager {
         this.dataSource = dataSource;
     }
 
-    private List<Employee> employees = new ArrayList<Employee>();
 
 	/**
 	 * Creates new employee with unique ID and adds it to database, throws IllegalArgumentException if argument is null
@@ -59,17 +56,25 @@ public class EmployeeManagerImpl implements EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
 	 */
-	public void updateEmployee(Employee employee) {
+	public void updateEmployee(Employee employee) throws Exception {
         if(employee == null) {
             throw new NullPointerException("Employee cannot be null.");
         }
-        for(Employee tempEmployee : employees) {
-            if (tempEmployee.equals(employee)) {
-                employees.set(employees.indexOf(tempEmployee), employee);
-                return;
+        try (Connection con = dataSource.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement(
+                    "update EMPLOYEES set NAME=?, OFFICE_NUMBER=?, POSITION=?, WORK_LOAD=? where ID=?")) {
+                st.setString(1, employee.getName());
+                st.setInt(2, employee.getOfficeNumber());
+                st.setString(3, employee.getPosition());
+                st.setInt(4, employee.getWorkLoad());
+                int n = st.executeUpdate();
+                if (n != 1) {
+                    throw new Exception("Did not update employee with id " + employee.getId(), null);
+                }
             }
+        } catch (SQLException e) {
+            throw new Exception("Database update failed.", e);
         }
-        throw new NoSuchElementException("No such employee in list.");
 	}
 
 	/**
@@ -80,15 +85,17 @@ public class EmployeeManagerImpl implements EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
 	 */
-	public void deleteEmployee(Employee employee) {
+	public void deleteEmployee(Employee employee) throws Exception {
         if(employee == null) {
             throw new NullPointerException("Employee cannot be null.");
         }
-        for(Employee tempEmployee : employees) {
-            if (tempEmployee.equals(employee)) {
-                employees.remove(employee);
-                return;
+        try (Connection con = dataSource.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement(
+                    "delete from EMPLOYEES where ID=?")) {
+                st.executeUpdate();
             }
+        } catch (SQLException e) {
+            throw new Exception("database delete failed", e);
         }
         throw new NoSuchElementException("No such employee in list.");
 	}
@@ -99,7 +106,7 @@ public class EmployeeManagerImpl implements EmployeeManager {
      * @return employees - unmodifiable list of all employees
      */
 	public List<Employee> listAllEmployees() {
-		return Collections.unmodifiableList(employees);
+		return null;
 	}
 
 	/**
@@ -110,16 +117,30 @@ public class EmployeeManagerImpl implements EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
 	 */
-	public Employee getEmployeeById(Long id) {
-        if(id == null) {
+	public Employee getEmployeeById(Long id) throws Exception {
+        if (id == null) {
             throw new NullPointerException("ID cannot be null.");
         }
-        for(Employee employee : employees) {
-            if (employee.getId().equals(id)){
-                return employee;
+        try (Connection con = dataSource.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement("SELECT * FROM EMPLOYEES WHERE ID = ?")) {
+                st.setLong(1, id);
+                try (ResultSet rs = st.executeQuery()) {
+                    if (rs.next()) {
+                        Employee employee = new Employee();
+                        employee.setId(id);
+                        employee.setName(rs.getString("NAME"));
+                        employee.setOfficeNumber(rs.getInt("OFFICE_NUMBER"));
+                        employee.setPosition(rs.getString("POSITION"));
+                        employee.setWorkLoad(rs.getInt("OFFICE_NUMBER"));
+                        return employee;
+                    } else {
+                        return null;
+                    }
+                }
             }
+        } catch (SQLException e) {
+            throw new Exception("database select failed", e);
         }
-        throw new NoSuchElementException("No such employee with specified ID in database.");
-	}
+    }
 
 }

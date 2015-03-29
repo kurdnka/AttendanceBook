@@ -21,7 +21,7 @@ public interface EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
-    void updateEmployee(Employee employee);
+    void updateEmployee(Employee employee) throws Exception;
 
     /**
      * Deletes specific employee from database, throws IllegalArgumentException if argument is null or
@@ -31,7 +31,7 @@ public interface EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
-    void deleteEmployee(Employee employee);
+    void deleteEmployee(Employee employee) throws Exception;
 
     /**
      * Returns unmodifiable list of all employees stored in database
@@ -48,6 +48,6 @@ public interface EmployeeManager {
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
      */
-    Employee getEmployeeById(Long id);
+    Employee getEmployeeById(Long id) throws Exception;
 
 }
