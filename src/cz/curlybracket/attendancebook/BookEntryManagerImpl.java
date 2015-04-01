@@ -4,6 +4,7 @@ import javax.sql.DataSource;
 import javax.sql.rowset.serial.SerialBlob;
 import java.nio.ByteBuffer;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -85,8 +86,26 @@ public class BookEntryManagerImpl implements BookEntryManager {
 	}
 
     @Override
-    public List<BookEntry> findAllBookEntries() {
-        return null;
+    public List<BookEntry> findAllBookEntries() throws Exception {
+        List<BookEntry> list = new ArrayList<>();
+
+        try (Connection con = dataSource.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement("SELECT * FROM BOOK_ENTRIES")) {
+                try (ResultSet rs = st.executeQuery()) {
+                    while (rs.next()) {
+                        BookEntry entry = new BookEntry();
+                        entry.setStartDate(rs.getDate("START_DATE"));
+                        entry.setEndDate(rs.getDate("END_DATE"));
+                        entry.setEmployee(employeeManager.getEmployeeById(rs.getLong("EMPLOYEE_ID")));
+                        entry.setType(EntryType.valueOf(rs.getString("TYPE")));
+                        list.add(entry);
+                    }
+                }
+            }
+        } catch (SQLException ex) {
+            throw new Exception("Database select failed", ex);
+        }
+        return list;
     }
 
     @Override
@@ -114,7 +133,7 @@ public class BookEntryManagerImpl implements BookEntryManager {
                 }
             }
         } catch (SQLException e) {
-            throw new Exception("database select failed", e);
+            throw new Exception("Database select failed", e);
         }
     }
 

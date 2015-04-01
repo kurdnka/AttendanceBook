@@ -5,7 +5,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.sqlite.SQLiteConfig;
+import org.sqlite.SQLiteDataSource;
 
+import javax.sql.DataSource;
+import javax.xml.crypto.Data;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.NoSuchElementException;
@@ -23,6 +30,7 @@ public class EmployeeManagerTest {
     private Class employeeManagerImpl;
     private EmployeeManager employeeManager;
 
+
     @Parameterized.Parameters
     public static Collection<Object> getParameters() {
         return Arrays.asList(
@@ -34,7 +42,7 @@ public class EmployeeManagerTest {
         );
     }
 
-    public EmployeeManagerTest (Class employeeManagerImpl) {
+    public EmployeeManagerTest (Class employeeManagerImpl) throws SQLException {
         this.employeeManagerImpl = employeeManagerImpl;
     }
 
@@ -42,7 +50,12 @@ public class EmployeeManagerTest {
 
     @Before
     public void setUp() throws Exception {
-        this.employeeManager = (EmployeeManager) this.employeeManagerImpl.newInstance();
+        SQLiteDataSource ds = new SQLiteDataSource();
+        SQLiteConfig config = new SQLiteConfig();
+        config.apply(DriverManager.getConnection("jdbc:sqlite:/home/xskypala/IdeaProjects/AttendanceBook/attendancebook.sqlite"));
+        ds.setConfig(config);
+
+        this.employeeManager = (EmployeeManager) this.employeeManagerImpl.getDeclaredConstructor(DataSource.class).newInstance(ds);
     }
 
     @After

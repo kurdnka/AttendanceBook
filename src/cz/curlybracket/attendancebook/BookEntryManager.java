@@ -26,7 +26,7 @@ public interface BookEntryManager {
 	 *
 	 * @return s
 	 */
-	List<BookEntry> findAllBookEntries ();
+	List<BookEntry> findAllBookEntries () throws Exception;
 
     /**
      * Returns employee with specified ID, throws IllegalArgumentException if argument is null or

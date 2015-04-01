@@ -15,10 +15,12 @@ public class EmployeeManagerImpl implements EmployeeManager {
 
 	/**
 	 * Creates new employee with unique ID and adds it to database, throws IllegalArgumentException if argument is null
+     * or or SQLException if database select fails
      *
 	 * @param employee - employee to be added
      * @return employee - added employee
      * @throws java.lang.NullPointerException - if argument is null
+     * @throws java.sql.SQLException - if database select fails
 	 */
 	public Employee createEmployee(Employee employee) throws Exception {
         if(employee == null) {
@@ -39,7 +41,7 @@ public class EmployeeManagerImpl implements EmployeeManager {
                         employee.setId(id);
                     }
                 } catch (Exception ex){
-                    throw new Exception("Generating UUID failed.", ex);
+                    throw new Exception("Generating ID failed.", ex);
                 }
                 return employee;
             }
@@ -49,12 +51,14 @@ public class EmployeeManagerImpl implements EmployeeManager {
 	}
 
 	/**
-	 * Replaces specific employee contained in database, throws IllegalArgumentException if argument is null or
-     * NoSuchElementException if specified employee is not in database
+	 * Replaces specific employee contained in database, throws IllegalArgumentException if argument is null,
+     * NoSuchElementException if specified employee is not in database or SQLException if database
+     * select fails
 	 *
      * @param employee - employee to be replaced
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
+     * @throws java.sql.SQLException - if database select fails
 	 */
 	public void updateEmployee(Employee employee) throws Exception {
         if(employee == null) {
@@ -68,8 +72,11 @@ public class EmployeeManagerImpl implements EmployeeManager {
                 st.setString(3, employee.getPosition());
                 st.setInt(4, employee.getWorkLoad());
                 int n = st.executeUpdate();
-                if (n != 1) {
-                    throw new Exception("Did not update employee with id " + employee.getId(), null);
+                if(n == 0) {
+                    throw new NoSuchElementException("No such employee in database.");
+                }
+                else if (n != 1) {
+                    throw new Exception("Did not update employee with id " + employee.getId());
                 }
             }
         } catch (SQLException e) {
@@ -78,12 +85,14 @@ public class EmployeeManagerImpl implements EmployeeManager {
 	}
 
 	/**
-	 * Deletes specific employee from database, throws IllegalArgumentException if argument is null or
-     * NoSuchElementException if specified employee is not in database
+	 * Deletes specific employee from database, throws IllegalArgumentException if argument is null,
+     * NoSuchElementException if specified employee is not in database or SQLException if database
+     * select fails
      *
 	 * @param employee - employee to be deleted
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
+     * @throws java.sql.SQLException - if database select fails
 	 */
 	public void deleteEmployee(Employee employee) throws Exception {
         if(employee == null) {
@@ -92,30 +101,55 @@ public class EmployeeManagerImpl implements EmployeeManager {
         try (Connection con = dataSource.getConnection()) {
             try (PreparedStatement st = con.prepareStatement(
                     "delete from EMPLOYEES where ID=?")) {
-                st.executeUpdate();
+                int n = st.executeUpdate();
+                if(n == 0) {
+                    throw new NoSuchElementException("No such employee in database.");
+                }
             }
         } catch (SQLException e) {
-            throw new Exception("database delete failed", e);
+            throw new Exception("Database delete failed", e);
         }
-        throw new NoSuchElementException("No such employee in list.");
 	}
 
     /**
-     * Returns unmodifiable list of all employees stored in database
+     * Returns unmodifiable list of all employees stored in database, throws SQLException if database
+     * select fails
      *
      * @return employees - unmodifiable list of all employees
+     * @throws java.sql.SQLException - if database select fails
      */
-	public List<Employee> listAllEmployees() {
-		return null;
+	public List<Employee> listAllEmployees() throws Exception {
+        List<Employee> list = new ArrayList<>();
+
+        try (Connection con = dataSource.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement("SELECT * FROM EMPLOYEES")) {
+                try (ResultSet rs = st.executeQuery()) {
+                    while (rs.next()) {
+                        Employee employee = new Employee();
+                        employee.setId(rs.getLong("ID"));
+                        employee.setName(rs.getString("NAME"));
+                        employee.setOfficeNumber(rs.getInt("OFFICE_NUMBER"));
+                        employee.setPosition(rs.getString("POSITION"));
+                        employee.setWorkLoad(rs.getInt("OFFICE_NUMBER"));
+                        list.add(employee);
+                    }
+                }
+            }
+        } catch (SQLException ex) {
+            throw new Exception("Database select failed", ex);
+        }
+        return list;
 	}
 
 	/**
-	 * Returns employee with specified ID, throws IllegalArgumentException if argument is null or
-     * NoSuchElementException if specified employee is not in database
+	 * Returns employee with specified ID, throws IllegalArgumentException if argument is null,
+     * NoSuchElementException if specified employee is not in database or SQLException if database
+     * select fails
      *
 	 * @param id - ID of employee to be returned
      * @throws java.lang.NullPointerException - if argument is null
      * @throws java.util.NoSuchElementException - if specified employee is not in database
+     * @throws java.sql.SQLException - if database select fails
 	 */
 	public Employee getEmployeeById(Long id) throws Exception {
         if (id == null) {
@@ -134,12 +168,12 @@ public class EmployeeManagerImpl implements EmployeeManager {
                         employee.setWorkLoad(rs.getInt("OFFICE_NUMBER"));
                         return employee;
                     } else {
-                        return null;
+                        throw new NoSuchElementException("No employee with such ID in database.");
                     }
                 }
             }
-        } catch (SQLException e) {
-            throw new Exception("database select failed", e);
+        } catch (SQLException ex) {
+            throw new Exception("Database select failed", ex);
         }
     }
 

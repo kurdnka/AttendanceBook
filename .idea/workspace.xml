@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cdb8f33-81d6-40aa-a9c1-52ac459b2e4a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_xerial_sqlite_jdbc_3_8_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AttendanceBook.iml" afterPath="$PROJECT_DIR$/AttendanceBook.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManager.java" afterPath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManagerImpl.java" afterPath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntry.java" afterPath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntry.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManager.java" afterPath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManagerImpl.java" afterPath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManagerImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EmployeeManager.java" afterPath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EmployeeManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EmployeeManagerImpl.java" afterPath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EmployeeManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/EmployeeManagerTest.java" afterPath="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/EmployeeManagerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -44,10 +51,6 @@
         <option name="myItemId" value="" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="EMPLOYEES" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -74,32 +77,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/Employee.java">
+      <file leaf-file-name="EmployeeManagerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/EmployeeManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1377">
-              <caret line="16" column="5" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.76243657" vertical-offset="41" max-vertical-offset="3132">
+              <caret line="44" column="80" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntryType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EntryType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeManagerImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AttendanceManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/Employee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1458">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeManagerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EmployeeManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.8613138" vertical-offset="0" max-vertical-offset="2533">
-              <caret line="107" column="46" selection-start-line="107" selection-start-column="46" selection-end-line="107" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="3294">
+              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4395#4396#0" expanded="true" />
-                <marker date="1427671120107" expanded="true" signature="929:1010" placeholder="insert into EMPLOYEES..." />
-                <marker date="1427671120107" expanded="true" signature="2569:2648" placeholder="update EMPLO..." />
-                <marker date="1427671120107" expanded="true" signature="2569:2648" placeholder="update EMPLO..." />
-                <marker date="1427671120107" expanded="true" signature="2569:2649" placeholder="update EMPLO..." />
-                <marker date="1427671120107" expanded="true" signature="2569:2654" placeholder="update EMPLO..." />
-                <marker date="1427671120107" expanded="true" signature="3911:3943" placeholder="delete from ..." />
-                <marker date="1427671120107" expanded="true" signature="5071:5107" placeholder="SELECT * FRO..EMPLOYEES..." />
+                <marker date="1427908601346" expanded="true" signature="1044:1125" placeholder="insert into EMPLOYEES..." />
+                <marker date="1427908601346" expanded="true" signature="2792:2872" placeholder="update EMPLO..." />
+                <marker date="1427908601346" expanded="true" signature="4377:4409" placeholder="delete from ..." />
+                <marker date="1427908601346" expanded="true" signature="5222:5245" placeholder="SELECT * FRO..EMPLOYEES..." />
+                <marker date="1427908601346" expanded="true" signature="6769:6805" placeholder="SELECT * FRO..EMPLOYEES..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttendanceManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1656">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1427908736414" expanded="true" signature="951:992" placeholder="SELECT * FRO..BOOK_ENTRIES..." />
+                <marker date="1427908736414" expanded="true" signature="2158:2206" placeholder="SELECT * FRO..BOOK_ENTRIES..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EmployeeManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1044">
+              <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,14 +163,52 @@
       <file leaf-file-name="BookEntryManagerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1149" max-vertical-offset="2108">
-              <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2610">
+              <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1427659491126" expanded="true" signature="798:881" placeholder="insert into BOOK_ENTRIES..." />
-                <marker date="1427659491126" expanded="true" signature="1871:1953" placeholder="update BOOK_..." />
-                <marker date="1427659491126" expanded="true" signature="2760:2795" placeholder="delete from ..." />
-                <marker date="1427659491126" expanded="true" signature="3256:3295" placeholder="select * fro..BOOK_ENTRIES..." />
+                <marker date="1427908025458" expanded="true" signature="826:909" placeholder="insert into BOOK_ENTRIES..." />
+                <marker date="1427908025458" expanded="true" signature="1899:1981" placeholder="update BOOK_..." />
+                <marker date="1427908025458" expanded="true" signature="2788:2823" placeholder="delete from ..." />
+                <marker date="1427908025458" expanded="true" signature="3244:3270" placeholder="SELECT * FRO..BOOK_ENTRIES..." />
+                <marker date="1427908025458" expanded="true" signature="4185:4224" placeholder="select * fro..BOOK_ENTRIES..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookEntry.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1746">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+              <folding>
+                <element signature="e#312#313#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#473#474#0" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#563#564#0" expanded="true" />
+                <element signature="e#865#866#0" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
+                <element signature="e#981#982#0" expanded="true" />
+                <element signature="e#1343#1344#0" expanded="true" />
+                <element signature="e#1396#1397#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookEntryManagerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/BookEntryManagerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="1512">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,15 +232,15 @@
         <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/Employee.java" />
         <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManager.java" />
         <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/BookEntryManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManager.java" />
-        <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManagerImpl.java" />
         <option value="db-console:/60e4f694/ad366bd3-fe79-4a2e-8cda-e2ae2f1dcc2f/" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d707402e-dbc7-45fb-93ef-ea8e6ecd3506/console.sql" />
-        <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntry.java" />
         <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EmployeeManager.java" />
         <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/EmployeeManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManager.java" />
+        <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntry.java" />
         <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EmployeeManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManagerImpl.java" />
       </list>
     </option>
   </component>
@@ -162,10 +256,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="-1" />
+    <option name="y" value="24" />
+    <option name="width" value="1922" />
+    <option name="height" value="1153" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -193,6 +287,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -325,7 +420,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -366,7 +460,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeeManagerTest">
+  <component name="RunManager" selected="JUnit.EmployeeManagerTest.testUpdateEmployee">
     <configuration default="false" name="BookEntryManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -437,6 +531,62 @@
       <option name="MAIN_CLASS_NAME" value="cz.curlybracket.attendancebook.EmployeeManagerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EmployeeManagerTest.testCreateEmployeeWithNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cz.curlybracket.attendancebook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="AttendanceBook" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.curlybracket.attendancebook" />
+      <option name="MAIN_CLASS_NAME" value="cz.curlybracket.attendancebook.EmployeeManagerTest" />
+      <option name="METHOD_NAME" value="testCreateEmployeeWithNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EmployeeManagerTest.testUpdateEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cz.curlybracket.attendancebook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="AttendanceBook" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.curlybracket.attendancebook" />
+      <option name="MAIN_CLASS_NAME" value="cz.curlybracket.attendancebook.EmployeeManagerTest" />
+      <option name="METHOD_NAME" value="testUpdateEmployee" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -700,16 +850,20 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.BookEntryManagerTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.BookEntryManagerTest.testCreateBookEntryWithId" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeManagerTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeManagerTest.testCreateEmployeeWithNull" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeManagerTest.testUpdateEmployee" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeManagerTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BookEntryManagerTest.testCreateBookEntryWithId" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BookEntryManagerTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeManagerTest.testUpdateEmployee" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeManagerTest.testCreateEmployeeWithNull" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeManagerTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BookEntryManagerTest.testCreateBookEntryWithId" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BookEntryManagerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -740,6 +894,8 @@
       <workItem from="1427648516072" duration="2773000" />
       <workItem from="1427652719657" duration="102000" />
       <workItem from="1427659517861" duration="5735000" />
+      <workItem from="1427903023636" duration="818000" />
+      <workItem from="1427903995586" duration="5203000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1425548491426</created>
@@ -787,42 +943,42 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30225000" />
+    <option name="totallyTimeSpent" value="36246000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-1" y="24" width="1922" height="1153" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923368" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32782102" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19552529" sideWeight="0.32070437" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258755" sideWeight="0.6792956" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21354167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21344717" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.178125" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17769477" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Properties Pane" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793522" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19554205" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Message Pane" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
@@ -862,28 +1018,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="595">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1427659491126" expanded="true" signature="798:881" placeholder="insert into BOOK_ENTRIES..." />
-            <marker date="1427659491126" expanded="true" signature="1871:1953" placeholder="update BOOK_..." />
-            <marker date="1427659491126" expanded="true" signature="2760:2795" placeholder="delete from ..." />
-            <marker date="1427659491126" expanded="true" signature="3256:3295" placeholder="select * fro..BOOK_ENTRIES..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
           <folding />
@@ -904,10 +1038,11 @@
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1427659491126" expanded="true" signature="798:881" placeholder="insert into BOOK_ENTRIES..." />
-            <marker date="1427659491126" expanded="true" signature="1871:1953" placeholder="update BOOK_..." />
-            <marker date="1427659491126" expanded="true" signature="2760:2795" placeholder="delete from ..." />
-            <marker date="1427659491126" expanded="true" signature="3256:3295" placeholder="select * fro..BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="826:909" placeholder="insert into BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="1899:1981" placeholder="update BOOK_..." />
+            <marker date="1427908025458" expanded="true" signature="2788:2823" placeholder="delete from ..." />
+            <marker date="1427908025458" expanded="true" signature="3244:3270" placeholder="SELECT * FRO..BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="4185:4224" placeholder="select * fro..BOOK_ENTRIES..." />
           </folding>
         </state>
       </provider>
@@ -916,7 +1051,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -924,7 +1074,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -946,7 +1098,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -985,10 +1139,11 @@
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1427659491126" expanded="true" signature="798:881" placeholder="insert into BOOK_ENTRIES..." />
-            <marker date="1427659491126" expanded="true" signature="1871:1953" placeholder="update BOOK_..." />
-            <marker date="1427659491126" expanded="true" signature="2760:2795" placeholder="delete from ..." />
-            <marker date="1427659491126" expanded="true" signature="3256:3295" placeholder="select * fro..BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="826:909" placeholder="insert into BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="1899:1981" placeholder="update BOOK_..." />
+            <marker date="1427908025458" expanded="true" signature="2788:2823" placeholder="delete from ..." />
+            <marker date="1427908025458" expanded="true" signature="3244:3270" placeholder="SELECT * FRO..BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="4185:4224" placeholder="select * fro..BOOK_ENTRIES..." />
           </folding>
         </state>
       </provider>
@@ -997,7 +1152,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1005,7 +1175,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1027,7 +1199,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,10 +1240,11 @@
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1427659491126" expanded="true" signature="798:881" placeholder="insert into BOOK_ENTRIES..." />
-            <marker date="1427659491126" expanded="true" signature="1871:1953" placeholder="update BOOK_..." />
-            <marker date="1427659491126" expanded="true" signature="2760:2795" placeholder="delete from ..." />
-            <marker date="1427659491126" expanded="true" signature="3256:3295" placeholder="select * fro..BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="826:909" placeholder="insert into BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="1899:1981" placeholder="update BOOK_..." />
+            <marker date="1427908025458" expanded="true" signature="2788:2823" placeholder="delete from ..." />
+            <marker date="1427908025458" expanded="true" signature="3244:3270" placeholder="SELECT * FRO..BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="4185:4224" placeholder="select * fro..BOOK_ENTRIES..." />
           </folding>
         </state>
       </provider>
@@ -1078,7 +1253,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1086,7 +1276,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,7 +1314,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1154,10 +1361,11 @@
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1427659491126" expanded="true" signature="798:881" placeholder="insert into BOOK_ENTRIES..." />
-            <marker date="1427659491126" expanded="true" signature="1871:1953" placeholder="update BOOK_..." />
-            <marker date="1427659491126" expanded="true" signature="2760:2795" placeholder="delete from ..." />
-            <marker date="1427659491126" expanded="true" signature="3256:3295" placeholder="select * fro..BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="826:909" placeholder="insert into BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="1899:1981" placeholder="update BOOK_..." />
+            <marker date="1427908025458" expanded="true" signature="2788:2823" placeholder="delete from ..." />
+            <marker date="1427908025458" expanded="true" signature="3244:3270" placeholder="SELECT * FRO..BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="4185:4224" placeholder="select * fro..BOOK_ENTRIES..." />
           </folding>
         </state>
       </provider>
@@ -1184,111 +1392,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EntryType.java">
+    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0709072" vertical-offset="0" max-vertical-offset="0">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3d85a0d1/d707402e-dbc7-45fb-93ef-ea8e6ecd3506/..EMPLOYEES">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/3d85a0d1/d707402e-dbc7-45fb-93ef-ea8e6ecd3506/..BOOK_ENTRIES">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/AttendanceManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08863399" vertical-offset="0" max-vertical-offset="0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1746">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#473#474#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManager.java">
+    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/BookEntryManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="1512">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EmployeeManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1044">
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/EmployeeManagerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EntryType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="16" column="5" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/BookEntryManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.060479667" vertical-offset="282" max-vertical-offset="1241">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38998958" vertical-offset="0" max-vertical-offset="959">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1458">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/BookEntryManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1149" max-vertical-offset="2108">
-          <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2610">
+          <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1427659491126" expanded="true" signature="798:881" placeholder="insert into BOOK_ENTRIES..." />
-            <marker date="1427659491126" expanded="true" signature="1871:1953" placeholder="update BOOK_..." />
-            <marker date="1427659491126" expanded="true" signature="2760:2795" placeholder="delete from ..." />
-            <marker date="1427659491126" expanded="true" signature="3256:3295" placeholder="select * fro..BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="826:909" placeholder="insert into BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="1899:1981" placeholder="update BOOK_..." />
+            <marker date="1427908025458" expanded="true" signature="2788:2823" placeholder="delete from ..." />
+            <marker date="1427908025458" expanded="true" signature="3244:3270" placeholder="SELECT * FRO..BOOK_ENTRIES..." />
+            <marker date="1427908025458" expanded="true" signature="4185:4224" placeholder="select * fro..BOOK_ENTRIES..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/AttendanceManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1656">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1427908736414" expanded="true" signature="951:992" placeholder="SELECT * FRO..BOOK_ENTRIES..." />
+            <marker date="1427908736414" expanded="true" signature="2158:2206" placeholder="SELECT * FRO..BOOK_ENTRIES..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/EmployeeManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8613138" vertical-offset="0" max-vertical-offset="2533">
-          <caret line="107" column="46" selection-start-line="107" selection-start-column="46" selection-end-line="107" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="3294">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4395#4396#0" expanded="true" />
-            <marker date="1427671120107" expanded="true" signature="929:1010" placeholder="insert into EMPLOYEES..." />
-            <marker date="1427671120107" expanded="true" signature="2569:2648" placeholder="update EMPLO..." />
-            <marker date="1427671120107" expanded="true" signature="2569:2648" placeholder="update EMPLO..." />
-            <marker date="1427671120107" expanded="true" signature="2569:2649" placeholder="update EMPLO..." />
-            <marker date="1427671120107" expanded="true" signature="2569:2654" placeholder="update EMPLO..." />
-            <marker date="1427671120107" expanded="true" signature="3911:3943" placeholder="delete from ..." />
-            <marker date="1427671120107" expanded="true" signature="5071:5107" placeholder="SELECT * FRO..EMPLOYEES..." />
+            <marker date="1427908601346" expanded="true" signature="1044:1125" placeholder="insert into EMPLOYEES..." />
+            <marker date="1427908601346" expanded="true" signature="2792:2872" placeholder="update EMPLO..." />
+            <marker date="1427908601346" expanded="true" signature="4377:4409" placeholder="delete from ..." />
+            <marker date="1427908601346" expanded="true" signature="5222:5245" placeholder="SELECT * FRO..EMPLOYEES..." />
+            <marker date="1427908601346" expanded="true" signature="6769:6805" placeholder="SELECT * FRO..EMPLOYEES..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cz/curlybracket/attendancebook/tests/cz/curlybracket/attendancebook/EmployeeManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76243657" vertical-offset="41" max-vertical-offset="3132">
+          <caret line="44" column="80" selection-start-line="44" selection-start-column="80" selection-end-line="44" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1357,7 +1614,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>junit:junit:4.8.1</last-edited>
+          <last-edited>org.xerial:sqlite-jdbc:3.8.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

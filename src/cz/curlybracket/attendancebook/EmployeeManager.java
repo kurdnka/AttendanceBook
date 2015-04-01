@@ -38,7 +38,7 @@ public interface EmployeeManager {
      *
      * @return employees - unmodifiable list of all employees
      */
-    List<Employee> listAllEmployees();
+    List<Employee> listAllEmployees() throws Exception;
 
     /**
      * Returns employee with specified ID, throws IllegalArgumentException if argument is null or

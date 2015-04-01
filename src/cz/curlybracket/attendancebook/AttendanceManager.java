@@ -2,6 +2,7 @@ package cz.curlybracket.attendancebook;
 
 import javafx.collections.transformation.SortedList;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface AttendanceManager {
@@ -10,7 +11,7 @@ public interface AttendanceManager {
 	 *
 	 * @param type
 	 */
-	List<Employee> findEmployeesByAttendanceType(EntryType type);
+	List<Employee> findEmployeesByAttendanceType(EntryType type) throws Exception;
 
 	/**
 	 *
@@ -28,5 +29,5 @@ public interface AttendanceManager {
 	 *
 	 * @param employee
 	 */
-	SortedList<BookEntry> getAttendanceHistoryByEmployee(Employee employee);
+	List<BookEntry> getAttendanceHistoryByEmployee(Employee employee) throws Exception;
 }

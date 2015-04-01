@@ -23,8 +23,7 @@ public class BookEntry {
 	}
 
 	public Employee getEmployee() {
-		// TODO - implement BookEntry.getEmployee
-		throw new UnsupportedOperationException();
+		return this.employee;
 	}
 
 	/**
@@ -32,8 +31,7 @@ public class BookEntry {
 	 * @param employee
 	 */
 	public void setEmployee(Employee employee) {
-		// TODO - implement BookEntry.setEmployee
-		throw new UnsupportedOperationException();
+		this.employee = employee;
 	}
 
 	public Date getStartDate() {
@@ -61,8 +59,7 @@ public class BookEntry {
 	}
 
 	public EntryType getType() {
-		// TODO - implement BookEntry.getType
-		throw new UnsupportedOperationException();
+		return this.type;
 	}
 
 	/**
@@ -70,8 +67,34 @@ public class BookEntry {
 	 * @param type
 	 */
 	public void setType(EntryType type) {
-		// TODO - implement BookEntry.setType
-		throw new UnsupportedOperationException();
+		this.type = type;
 	}
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        BookEntry bookEntry = (BookEntry) o;
+
+        if (id != null ? !id.equals(bookEntry.id) : bookEntry.id != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return "BookEntry{" +
+                "id=" + id +
+                ", employee=" + employee +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", type=" + type +
+                '}';
+    }
 }
